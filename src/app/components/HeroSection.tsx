@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                px: 4,
+                px: 6,
                 position: 'relative',
             }}
         ><Box sx={{
