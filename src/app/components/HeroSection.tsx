@@ -10,9 +10,8 @@ import {
     IconButton,
     Chip,
 } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import { relative } from 'path';
+
 
 const HeroSection: React.FC = () => {
     return (
