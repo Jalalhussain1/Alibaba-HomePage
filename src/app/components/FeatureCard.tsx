@@ -19,16 +19,15 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
     return (
         <Box
             sx={{
-                backgroundColor: "hsla(0, 84.80%, 12.90%, 0.03);",
+                backgroundColor: "hsla(0, 84.80%, 12.90%, 0.03)",
                 border: "1px solid rgba(22, 1, 1, 0.1)",
                 borderRadius: "24px",
-                width: "280px",
-                height: "370px",
                 padding: "32px",
                 display: "flex",
                 flexDirection: "column",
                 transition: "all 0.3s ease",
-                "&:hover": {
+                height: "100%",
+                '&:hover': {
                     backgroundColor: "rgba(133, 8, 8, 0.34)",
                     transform: "translateY(-4px)",
                 },
@@ -107,26 +106,39 @@ export default function FeaturesSection() {
                 backgroundColor: "#4A3728",
                 py: 8,
                 width: "100%",
-                overflowX: "auto",
             }}
         >
-            <Container
-                maxWidth={false}
-                sx={{
-                    px: 4,
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: 4,
-                    minWidth: "fit-content",
-                    justifyContent: {
-                        xs: "flex-start",
-                        lg: "center",
-                    },
-                }}
-            >
-                {features.map((feature, index) => (
-                    <FeatureCard key={index} icon={feature.icon} title={feature.title} description={feature.description} />
-                ))}
+            <Container maxWidth="lg">
+                <Box
+                    sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        rowGap: 4,
+                        columnGap: { xs: 0, sm: 2, md: 3 },
+                    }}
+                >
+                    {features.map((feature, index) => (
+                        <Box
+                            key={index}
+                            sx={{
+                                flexBasis: {
+                                    xs: "100%",   // Mobile: full width
+                                    sm: "48%",    // Tablet: 2 in a row
+                                    lg: "23%"     // Laptop: 4 in a row
+                                },
+                                flexGrow: 0,
+                                flexShrink: 0,
+                            }}
+                        >
+                            <FeatureCard
+                                icon={feature.icon}
+                                title={feature.title}
+                                description={feature.description}
+                            />
+                        </Box>
+                    ))}
+                </Box>
             </Container>
         </Box>
     )
