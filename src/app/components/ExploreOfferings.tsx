@@ -70,7 +70,7 @@ const ExploreSection: React.FC = () => {
                                     <Typography variant="h5" fontWeight="bold" color="orange">
                                         {stat.value}
                                     </Typography>
-                                    <Typography>{stat.label}</Typography>
+                                    <Typography color='brown'>{stat.label}</Typography>
                                 </Box>
                             </Box>
                         ))}
