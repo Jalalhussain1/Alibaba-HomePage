@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                px: 6,
+                px: 10,
                 position: 'relative',
             }}
         ><Box sx={{
@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
         }}></Box>
 
             {/* Top Link */}
-            <Typography sx={{ color: 'white', zIndex: 10, mb: 3, fontSize: '14' }}>
+            <Typography sx={{ color: 'white', zIndex: 10,  mb: 1,  fontSize: '14' }}>
                 ▶️ Learn about Alibaba.com
             </Typography>
 
@@ -51,7 +51,6 @@ const HeroSection: React.FC = () => {
                     fontWeight: 'bold',
                     maxWidth: '90%',     // full width to prevent wrapping
                     mb: 2,
-                    padding: 3,
                     zIndex: 10,
                     textOverflow: 'ellipsis', // optional: adds ... if overflow
                 }}
@@ -102,7 +101,6 @@ const HeroSection: React.FC = () => {
                         backgroundColor: '#ff6a00',
                         borderRadius: '0 30px 30px 0',
                         px: 4,
-                        height: '40px',
                         textTransform: 'none',
                         fontWeight: 'bold',
                         '&:hover': {
