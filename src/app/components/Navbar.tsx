@@ -16,15 +16,6 @@ import FlagIcon from '@mui/icons-material/Flag';
 import { useState } from 'react';
 
 const Navbar = () => {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
-    const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-    };
-
     return (
         <AppBar position="static" sx={{ bgcolor: 'black', color: 'white', px: 2 }}>
             <Toolbar sx={{ py: 1, flexDirection: 'column', alignItems: 'stretch' }}>
@@ -36,8 +27,8 @@ const Navbar = () => {
                     alignItems="flex-start"
                 >
                     {/* Left - Logo */}
-                    <Box display="flex"  alignItems="center">
-                        <img src="alibaba.png"   alt="Alibaba" width={50} />
+                    <Box display="flex" alignItems="center">
+                        <img src="alibaba.png" alt="Alibaba" width={50} />
                         <h1>Alibaba.com</h1>
                     </Box>
 
@@ -45,7 +36,7 @@ const Navbar = () => {
                     <Box display="flex" flexDirection="column" alignItems="flex-end">
                         {/* Top right row */}
                         <Box display="flex" alignItems="center" gap={2}>
-                            
+
                             <FlagIcon fontSize="small" />
                             <Typography variant="body2">US</Typography>
                             <LanguageIcon fontSize="small" />
@@ -78,7 +69,6 @@ const Navbar = () => {
                     <Box display="flex" alignItems="center" gap={2} mt={2}>
                         <Button
                             startIcon={<MenuIcon />}
-                            onClick={handleMenuOpen}
                             sx={{ color: 'white', textTransform: 'none' }}
                         >
                             All categories

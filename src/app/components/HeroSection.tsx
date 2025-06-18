@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
         }}></Box>
 
             {/* Top Link */}
-            <Typography sx={{ color: 'white', zIndex: 10,  mb: 1,  fontSize: '14' }}>
+            <Typography sx={{ color: 'white', zIndex: 10, mb: 1, fontSize: '14' }}>
                 ▶️ Learn about Alibaba.com
             </Typography>
 
