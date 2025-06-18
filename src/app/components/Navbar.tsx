@@ -13,8 +13,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LanguageIcon from '@mui/icons-material/Language';
 import FlagIcon from '@mui/icons-material/Flag';
-import { useState } from 'react';
-
 const Navbar = () => {
     return (
         <AppBar position="static" sx={{ bgcolor: 'black', color: 'white', px: 2 }}>
