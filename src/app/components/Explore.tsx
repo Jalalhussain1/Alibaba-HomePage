@@ -4,7 +4,7 @@ import { Box, Typography, Card, CardContent, Link, Chip, Container } from "@mui/
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
-const StyledCard = styled(Card)(({ theme }) => ({
+const StyledCard = styled(Card)(({ }) => ({
   height: "100%",
   display: "flex",
   flexDirection: "column",
@@ -16,24 +16,17 @@ const StyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const SectionHeader = styled(Box)(({ theme }) => ({
+const SectionHeader = styled(Box)(({  }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  marginBottom: theme.spacing(2),
+  
 }));
 
-const ViewMoreLink = styled(Link)(({ theme }) => ({
-  color: theme.palette.text.secondary,
-  textDecoration: "underline",
-  fontSize: "0.875rem",
-  cursor: "pointer",
-  "&:hover": {
-    color: theme.palette.primary.main,
-  },
-}));
 
-const PopularityChip = styled(Chip)(({ theme }) => ({
+
+
+const PopularityChip = styled(Chip)(({ }) => ({
   backgroundColor: "#f5f5f5",
   color: "#666",
   fontWeight: "500",
@@ -41,15 +34,7 @@ const PopularityChip = styled(Chip)(({ theme }) => ({
   border: "1px solid #e0e0e0",
 }));
 
-const DiscountChip = styled(Chip)(({ theme }) => ({
-  backgroundColor: "#4caf50",
-  color: "white",
-  fontWeight: "bold",
-  position: "absolute",
-  top: 8,
-  left: 8,
-  zIndex: 1,
-}));
+
 
 const CarouselDot = styled(Box)<{ active?: boolean }>(({ active }) => ({
   width: 8,
@@ -226,9 +211,9 @@ export default function ExploreOfferings() {
                   }}
                 />
                 <Box>
-                  
+
                   <Typography variant="h5" color="text-white" >
-                  180-day lowest price
+                    180-day lowest price
                   </Typography>
                 </Box>
               </Box>
@@ -240,7 +225,7 @@ export default function ExploreOfferings() {
             <CardContent>
               <SectionHeader>
                 <Typography variant="h5">Deals on best seller</Typography>
-                
+
               </SectionHeader>
               <Box
                 sx={{
