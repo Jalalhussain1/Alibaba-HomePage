@@ -1,10 +1,11 @@
 "use client";
 
-import { Box, Typography, Card, CardContent, Link, Chip, Container } from "@mui/material";
+import { Box, Typography, Card, CardContent, Container, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
-const StyledCard = styled(Card)(({ }) => ({
+// Styled Components
+const StyledCard = styled(Card)(() => ({
   height: "100%",
   display: "flex",
   flexDirection: "column",
@@ -16,25 +17,19 @@ const StyledCard = styled(Card)(({ }) => ({
   },
 }));
 
-const SectionHeader = styled(Box)(({  }) => ({
+const SectionHeader = styled(Box)(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  
 }));
 
-
-
-
-const PopularityChip = styled(Chip)(({ }) => ({
+const PopularityChip = styled(Chip)(() => ({
   backgroundColor: "#f5f5f5",
   color: "#666",
-  fontWeight: "500",
+  fontWeight: 500,
   fontSize: "0.875rem",
   border: "1px solid #e0e0e0",
 }));
-
-
 
 const CarouselDot = styled(Box)<{ active?: boolean }>(({ active }) => ({
   width: 8,
@@ -52,7 +47,7 @@ export default function ExploreOfferings() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const carouselImages = ["/boat.jpg", "/car.png", "/window.jpg"];
-  const newArrivalImages = ["/bird.jpg", "/boat.jpg", "/bottle.jpg", "window.jpg"];
+  const newArrivalImages = ["/bird.jpg", "/boat.jpg", "/bottle.jpg", "/window.jpg"];
 
   return (
     <Container
@@ -195,7 +190,7 @@ export default function ExploreOfferings() {
             gap: 2,
           }}
         >
-          {/* Repeated Card */}
+          {/* New This Week */}
           <StyledCard>
             <CardContent sx={{ p: 3 }}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -205,16 +200,13 @@ export default function ExploreOfferings() {
                     height: 80,
                     backgroundColor: "#f5f5f5",
                     backgroundImage: 'url("/bird.jpg")',
-                    backgroundSize: "cover",        // ✅ Make image cover the box
+                    backgroundSize: "cover",
                     backgroundPosition: "center",
                     borderRadius: 6,
                   }}
                 />
                 <Box>
-
-                  <Typography variant="h5" color="text-white" >
-                    180-day lowest price
-                  </Typography>
+                  <Typography variant="h5">180-day lowest price</Typography>
                 </Box>
               </Box>
             </CardContent>
@@ -225,7 +217,6 @@ export default function ExploreOfferings() {
             <CardContent>
               <SectionHeader>
                 <Typography variant="h5">Deals on best seller</Typography>
-
               </SectionHeader>
               <Box
                 sx={{
