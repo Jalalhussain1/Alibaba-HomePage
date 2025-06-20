@@ -4,6 +4,7 @@ import FeatureCard from './components/FeatureCard'
 import ExploreOfferings from './components/ExploreOfferings';
 import Explore from './components/Explore'
 import FactoryCard from './components/FactoryCard'
+import TradeCard from './components/TradeCard'
 
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
      <ExploreOfferings />
      <Explore />
      <FactoryCard />
+     <TradeCard />
       {/* Rest of the homepage */}
     </>
   );
