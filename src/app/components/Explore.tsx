@@ -21,6 +21,16 @@ const SectionHeader = styled(Box)(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  marginBottom: 1,
+}));
+
+const CardHeader = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  width: "100%",
+  padding: "0 8px",
+  marginBottom: 8,
 }));
 
 const PopularityChip = styled(Chip)(() => ({
@@ -49,6 +59,24 @@ export default function ExploreOfferings() {
   const carouselImages = ["/boat.jpg", "/car.png", "/window.jpg"];
   const newArrivalImages = ["/bird.jpg", "/boat.jpg", "/bottle.jpg", "/window.jpg"];
 
+  const renderCardHeader = (title:string) => (
+    <CardHeader>
+      <Typography variant="h6" fontWeight={600}>{title}</Typography>
+     
+      <Typography
+        variant="body2"
+        sx={{
+          textDecoration: "underline",
+          cursor: "pointer",
+          color: "text.secondary",
+          fontWeight: 500,
+        }}
+      >
+        View more
+      </Typography>
+    </CardHeader>
+  );
+
   return (
     <Container
       maxWidth={false}
@@ -69,71 +97,78 @@ export default function ExploreOfferings() {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: 4,
-          marginTop: "10%",
+          marginTop: "1%",
         }}
       >
-        {/* First Card */}
-        <StyledCard sx={{ width: { xs: "100%", sm: "48%", md: "30%" } }}>
-          <CardContent>
-            <SectionHeader>
-              <Typography variant="h5">Most popular</Typography>
-            </SectionHeader>
-            <Typography variant="body2">Speed Reducers</Typography>
-            <PopularityChip label="Popularity score: 4.2" />
-            <Box
-              sx={{
-                width: "100%",
-                height: 350,
-                backgroundColor: "#f5f5f5",
-                backgroundImage: `url(${carouselImages[activeSlide]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                borderRadius: 4,
-                my: 2,
-              }}
-            />
-            <Box sx={{ display: "flex", gap: 6, overflowX: "auto", pb: 1 }}>
-              {carouselImages.map((img, i) => (
-                <Box
-                  key={i}
-                  sx={{
-                    minWidth: 80,
-                    height: 80,
-                    backgroundImage: `url(${img})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    borderRadius: 1,
-                    cursor: "pointer",
-                    border: activeSlide === i ? "2px solid #1976d2" : "1px solid #ccc",
-                  }}
-                  onClick={() => setActiveSlide(i)}
-                />
-              ))}
-            </Box>
-            <Box sx={{ display: "flex", justifyContent: "center", gap: 1, mt: 1 }}>
-              {carouselImages.map((_, i) => (
-                <CarouselDot key={i} active={activeSlide === i} onClick={() => setActiveSlide(i)} />
-              ))}
-            </Box>
-          </CardContent>
-        </StyledCard>
+        {/* Top Heading */}
+        <Box sx={{ width: "100%", px: 5, mb: 2 }}>
+          <Typography variant="h4" fontWeight="bold" mb={0.5}>
+            Discover your next business opportunity
+          </Typography>
+        </Box>
+
+        {/* First Column */}
+        <Box sx={{ width: { xs: "100%", sm: "48%", md: "30%", height:'12%' } }}>
+          {renderCardHeader("Top Ranking")}
+          <StyledCard>
+            <CardContent>
+              <SectionHeader>
+                <Typography variant="h5">Most popular</Typography>
+              </SectionHeader>
+              <Typography variant="body2">Speed Reducers</Typography>
+              <PopularityChip label="Popularity score: 4.2" />
+              <Box
+                sx={{
+                  width: "100%",
+                  height: 350,
+                  backgroundColor: "#f5f5f5",
+                  backgroundImage: `url(${carouselImages[activeSlide]})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  borderRadius: 4,
+                  my: 2,
+                }}
+              />
+              <Box sx={{ display: "flex", gap: 6, overflowX: "auto", pb: 1 }}>
+                {carouselImages.map((img, i) => (
+                  <Box
+                    key={i}
+                    sx={{
+                      minWidth: 80,
+                      height: 80,
+                      backgroundImage: `url(${img})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      borderRadius: 1,
+                      cursor: "pointer",
+                      border: activeSlide === i ? "2px solid #1976d2" : "1px solid #ccc",
+                    }}
+                    onClick={() => setActiveSlide(i)}
+                  />
+                ))}
+              </Box>
+              <Box sx={{ display: "flex", justifyContent: "center", gap: 1, mt: 1 }}>
+                {carouselImages.map((_, i) => (
+                  <CarouselDot key={i} active={activeSlide === i} onClick={() => setActiveSlide(i)} />
+                ))}
+              </Box>
+            </CardContent>
+          </StyledCard>
+        </Box>
 
         {/* Second Column */}
         <Box
           sx={{
-            width: { xs: "100%", sm: "48%", md: "30%" },
-            height: "12%",
+            width: { xs: "100%", sm: "48%", md: "30%", height:'12%'},
             display: "flex",
             flexDirection: "column",
             gap: 2,
           }}
         >
-          {/* New Arrivals */}
+          {renderCardHeader("New arrivals")}
           <StyledCard>
             <CardContent>
-              <SectionHeader>
-                <Typography variant="h5">40+ products added today</Typography>
-              </SectionHeader>
+              <Typography variant="body2">40+ products added today</Typography>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2, height: 390 }}>
                 {newArrivalImages.map((img, i) => (
                   <Box
@@ -152,10 +187,9 @@ export default function ExploreOfferings() {
             </CardContent>
           </StyledCard>
 
-          {/* Verified Suppliers */}
           <StyledCard>
-            <CardContent sx={{ p: 3 }}>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <CardContent>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2,}}>
                 <Box
                   sx={{
                     width: 80,
@@ -183,16 +217,15 @@ export default function ExploreOfferings() {
         {/* Third Column */}
         <Box
           sx={{
-            width: { xs: "100%", sm: "48%", md: "30%" },
-            height: "12%",
+            width: { xs: "100%", sm: "48%", md: "30%",  height:'12%'},
             display: "flex",
             flexDirection: "column",
             gap: 2,
           }}
         >
-          {/* New This Week */}
+          {renderCardHeader("Top deals")}
           <StyledCard>
-            <CardContent sx={{ p: 3 }}>
+            <CardContent>
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <Box
                   sx={{
@@ -212,13 +245,11 @@ export default function ExploreOfferings() {
             </CardContent>
           </StyledCard>
 
-          {/* Top Deals */}
           <StyledCard>
             <CardContent>
-              <SectionHeader>
-                <Typography variant="h5">Deals on best seller</Typography>
-              </SectionHeader>
+              <Typography fontWeight={'bold'}>Deals On The Best Seller</Typography>
               <Box
+              
                 sx={{
                   width: "100%",
                   height: 370,

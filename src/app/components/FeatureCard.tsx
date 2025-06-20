@@ -120,7 +120,7 @@ export default function FeaturesSection() {
                 >
                     {features.map((feature, index) => (
                         <Box
-                            key={index}
+                            key={index}   
                             sx={{
                                 flexBasis: {
                                     xs: "100%",   // Mobile: full width
