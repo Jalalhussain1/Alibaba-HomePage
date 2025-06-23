@@ -5,6 +5,7 @@ import ExploreOfferings from './components/ExploreOfferings';
 import Explore from './components/Explore'
 import FactoryCard from './components/FactoryCard'
 import TradeCard from './components/TradeCard'
+import StreamLine from './components/StreamLine'
 
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
      <Explore />
      <FactoryCard />
      <TradeCard />
+     <StreamLine />
       {/* Rest of the homepage */}
     </>
   );
