@@ -6,6 +6,7 @@ import Explore from './components/Explore'
 import FactoryCard from './components/FactoryCard'
 import TradeCard from './components/TradeCard'
 import StreamLine from './components/StreamLine'
+import BusinessStage from "./components/BusinessStage"
 
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
      <FactoryCard />
      <TradeCard />
      <StreamLine />
+     <BusinessStage />
       {/* Rest of the homepage */}
     </>
   );
