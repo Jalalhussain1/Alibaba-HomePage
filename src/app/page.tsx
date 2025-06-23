@@ -8,6 +8,7 @@ import TradeCard from './components/TradeCard'
 import StreamLine from './components/StreamLine'
 import BusinessStage from "./components/BusinessStage"
 import CTASection from './components/CtaSection';
+import CorporateSection from './components/CorporateSection'
 
 
 export default function HomePage() {
@@ -23,6 +24,7 @@ export default function HomePage() {
      <StreamLine />
      <BusinessStage />
      <CTASection />
+     <CorporateSection />
       {/* Rest of the homepage */}
     </>
   );
