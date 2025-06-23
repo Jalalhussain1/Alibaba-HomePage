@@ -7,6 +7,7 @@ import FactoryCard from './components/FactoryCard'
 import TradeCard from './components/TradeCard'
 import StreamLine from './components/StreamLine'
 import BusinessStage from "./components/BusinessStage"
+import CTASection from './components/CtaSection';
 
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
      <TradeCard />
      <StreamLine />
      <BusinessStage />
+     <CTASection />
       {/* Rest of the homepage */}
     </>
   );
