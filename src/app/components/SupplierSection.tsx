@@ -29,7 +29,7 @@ const countries: Country[] = [
 
 export default function SupplierFinder() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+ 
 
   return (
     <Container maxWidth="xl" sx={{ py: 4 }}>
