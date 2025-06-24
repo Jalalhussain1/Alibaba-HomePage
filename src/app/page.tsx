@@ -9,6 +9,9 @@ import StreamLine from './components/StreamLine'
 import BusinessStage from "./components/BusinessStage"
 import CTASection from './components/CtaSection';
 import CorporateSection from './components/CorporateSection'
+import SupplierSection from './components/SupplierSection';
+import FooterSection from './components/FooterSection'
+
 
 
 export default function HomePage() {
@@ -25,6 +28,8 @@ export default function HomePage() {
       <BusinessStage />
       <CTASection />
       <CorporateSection />
+      <SupplierSection />
+      <FooterSection />
       {/* Rest of the homepage */}
     </>
   );

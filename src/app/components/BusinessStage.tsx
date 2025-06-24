@@ -14,6 +14,7 @@ import {
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
+
 const testimonials = [
     {
         name: "Dr. Sayed Ibrahim",
@@ -142,6 +143,7 @@ export default function BusinessStageCarousel() {
                     <ArrowForwardIosIcon />
                 </IconButton>
             </Box>
+            
         </Box>
     );
 }
