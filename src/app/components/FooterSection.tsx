@@ -1,5 +1,5 @@
 "use client"
-import { Box, Container, Typography, Link, IconButton, Button, useTheme, useMediaQuery } from "@mui/material"
+import { Box, Container, Typography, Link, IconButton, Button, } from "@mui/material"
 import { Facebook, LinkedIn, Twitter, Instagram, YouTube } from "@mui/icons-material"
 
 interface FooterSection {
@@ -103,7 +103,7 @@ const policyLinks = [
 ]
 
 export default function Footer() {
-    const theme = useTheme()
+   
     return (
         <Box component="footer" sx={{ pt: 6, pb: 5, px: 4, }}>
             <Container maxWidth="xl">
