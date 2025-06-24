@@ -128,7 +128,7 @@ export default function CorporateMissionAndLocationsSection() {
                 backgroundColor: "#F5F5F5",
                 backgroundImage: `url('image7.jpeg')`,
                 borderRadius: 5,
-                height:300,
+                height: 300,
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "flex-start",
@@ -136,7 +136,7 @@ export default function CorporateMissionAndLocationsSection() {
               }}
             >
               <Box>
-                <Typography variant="h6" sx={{ color: "#FF6B35", mt:2,}}>
+                <Typography variant="h6" sx={{ color: "#FF6B35", mt: 2, }}>
                   OUR LOCATIONS
                 </Typography>
                 <Typography

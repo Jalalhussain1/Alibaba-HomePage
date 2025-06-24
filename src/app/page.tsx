@@ -17,14 +17,14 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <FeatureCard />
-     <ExploreOfferings />
-     <Explore />
-     <FactoryCard />
-     <TradeCard />
-     <StreamLine />
-     <BusinessStage />
-     <CTASection />
-     <CorporateSection />
+      <ExploreOfferings />
+      <Explore />
+      <FactoryCard />
+      <TradeCard />
+      <StreamLine />
+      <BusinessStage />
+      <CTASection />
+      <CorporateSection />
       {/* Rest of the homepage */}
     </>
   );
