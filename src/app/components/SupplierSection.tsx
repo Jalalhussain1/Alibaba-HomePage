@@ -5,8 +5,6 @@ import {
   Typography,
   Link,
   Container,
-  useTheme,
-  useMediaQuery,
   Divider,
 } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
@@ -28,9 +26,6 @@ const countries: Country[] = [
 ];
 
 export default function SupplierFinder() {
-  const theme = useTheme();
- 
-
   return (
     <Container maxWidth="xl" sx={{ py: 4 }}>
       <Box sx={{ mb: 4 }}>
