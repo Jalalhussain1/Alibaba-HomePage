@@ -104,8 +104,6 @@ const policyLinks = [
 
 export default function Footer() {
     const theme = useTheme()
-    const isMobile = useMediaQuery(theme.breakpoints.down("md"))
-
     return (
         <Box component="footer" sx={{ pt: 6, pb: 5, px: 4, }}>
             <Container maxWidth="xl">
